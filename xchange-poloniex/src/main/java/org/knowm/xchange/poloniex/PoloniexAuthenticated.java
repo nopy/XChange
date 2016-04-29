@@ -72,8 +72,7 @@ public interface PoloniexAuthenticated {
   @POST
   @FormParam("command")
   HashMap<String, String> cancelOrder(@HeaderParam("Key") String apiKey, @HeaderParam("Sign") ParamsDigest signature,
-      @FormParam("nonce") SynchronizedValueFactory<Long> nonce, @FormParam("orderNumber") String orderNumber,
-      @FormParam("currencyPair") String currencyPair) throws PoloniexException, IOException;
+      @FormParam("nonce") SynchronizedValueFactory<Long> nonce, @FormParam("orderNumber") String orderNumber) throws PoloniexException, IOException;
 
   @POST
   @FormParam("command")
